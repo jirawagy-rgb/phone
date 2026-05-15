@@ -1,0 +1,23 @@
+{
+  "name": "phone-repair-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static landing page for FixIt Pro phone repair business",
+  "scripts": {
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint:js": "eslint script.js",
+    "lint:css": "stylelint \"*.css\"",
+    "lint:html": "htmlhint index.html",
+    "test:smoke": "playwright test -c playwright.config.cjs",
+    "check": "npm run lint && npm run test:smoke"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@playwright/test": "^1.55.0",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}

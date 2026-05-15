@@ -1,0 +1,70 @@
+/* Responsive breakpoints */
+
+@media (width <= 900px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer__inner { grid-template-columns: 1fr 1fr; }
+  .pricing-card--featured { transform: none; }
+}
+
+@media (width <= 680px) {
+  .section { padding: 64px 0; }
+
+  .navbar__links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    inset: var(--navbar-h) 0 0 0;
+    background: var(--color-dark);
+    padding: 32px 24px;
+    gap: 20px;
+    z-index: 99;
+    overflow-y: auto;
+  }
+
+  .navbar__links.open { display: flex; }
+
+  .navbar__links a {
+    font-size: 1.1rem;
+    color: var(--color-white);
+  }
+  .hamburger { display: flex; }
+
+  .hero__trust-bar {
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .trust-divider { display: none; }
+  .trust-item { padding: 0 8px; }
+
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 28px 20px; }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__bottom .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (width <= 480px) {
+  .services__grid,
+  .why-us__grid,
+  .pricing__grid,
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
