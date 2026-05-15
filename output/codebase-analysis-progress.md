@@ -1,6 +1,6 @@
 # Codebase Analysis Progress
 
-**Project:** C:\Users\Jirka\Downloads\PhoneRepairLanding  
+**Project:** C:\Users\Jirka\Desktop\GitHub\Repos\phone  
 **Analysis Started:** 2026-05-14  
 **Last Updated:** 2026-05-14  
 
@@ -65,7 +65,7 @@ FixIt Pro is a production-ready landing page for a phone repair business. The pr
 **Completed:** 2026-05-14
 
 **Deliverables Created:**
-- [output/CODEBASE_ANALYSIS.md](/C:/Users/Jirka/Downloads/PhoneRepairLanding/output/CODEBASE_ANALYSIS.md) - Comprehensive 434-line analysis document
+- [output/CODEBASE_ANALYSIS.md](C:\Users\Jirka\Desktop\GitHub\Repos\phone\output\CODEBASE_ANALYSIS.md) - Comprehensive 434-line analysis document
 
 **Documentation Includes:**
 - Executive summary with metrics
