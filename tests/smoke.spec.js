@@ -23,6 +23,11 @@ test.describe('Landing Page Smoke Tests', () => {
     await expect(navLinks).toHaveClass(/open/);
     await expect(hamburger).toHaveAttribute('aria-expanded', 'true');
 
+    await page.keyboard.press('Escape');
+    await expect(navLinks).not.toHaveClass(/open/);
+    await expect(hamburger).toHaveAttribute('aria-expanded', 'false');
+
+    await hamburger.click();
     await page.locator('#navLinks a[href="#services"]').click();
     await expect(navLinks).not.toHaveClass(/open/);
     await expect(hamburger).toHaveAttribute('aria-expanded', 'false');

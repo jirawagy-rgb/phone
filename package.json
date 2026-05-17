@@ -8,6 +8,7 @@
     "lint:js": "eslint script.js",
     "lint:css": "stylelint \"*.css\"",
     "lint:html": "htmlhint index.html",
+    "serve": "node tests/static-server.cjs",
     "test:smoke": "playwright test -c playwright.config.cjs",
     "check": "npm run lint && npm run test:smoke"
   },

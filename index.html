@@ -22,7 +22,7 @@
         <span class="logo-icon">🔧</span>
         <span>FixIt<strong>Pro</strong></span>
       </a>
-      <nav class="navbar__links" id="navLinks">
+      <nav class="navbar__links" id="navLinks" aria-label="Primary navigation">
         <a href="#services">Services</a>
         <a href="#why-us">Why Us</a>
         <a href="#pricing">Pricing</a>
@@ -30,7 +30,7 @@
         <a href="#faq">FAQ</a>
         <a href="#contact" class="btn btn--nav">Get a Quote</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -263,47 +263,47 @@
       </div>
       <div class="faq__list fade-in">
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" id="faq-question-duration" aria-expanded="false" aria-controls="faq-answer-duration">
             How long does a typical repair take?
             <span class="faq-item__arrow">▼</span>
           </button>
-          <div class="faq-item__answer">
+          <div class="faq-item__answer" id="faq-answer-duration" role="region" aria-labelledby="faq-question-duration" aria-hidden="true">
             <p>Most common repairs (screen, battery, charging port) take between 30–60 minutes. Complex repairs like water damage or motherboard work may take 1–2 days. We'll give you an accurate time estimate before starting.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" id="faq-question-appointment" aria-expanded="false" aria-controls="faq-answer-appointment">
             Do I need to make an appointment?
             <span class="faq-item__arrow">▼</span>
           </button>
-          <div class="faq-item__answer">
+          <div class="faq-item__answer" id="faq-answer-appointment" role="region" aria-labelledby="faq-question-appointment" aria-hidden="true">
             <p>No appointment needed — walk-ins are always welcome! However, booking ahead via the contact form guarantees your spot and lets us prepare the right parts in advance.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" id="faq-question-brands" aria-expanded="false" aria-controls="faq-answer-brands">
             What brands do you repair?
             <span class="faq-item__arrow">▼</span>
           </button>
-          <div class="faq-item__answer">
+          <div class="faq-item__answer" id="faq-answer-brands" role="region" aria-labelledby="faq-question-brands" aria-hidden="true">
             <p>We repair all major smartphone brands: Apple iPhone, Samsung Galaxy, Xiaomi, Huawei, OnePlus, Google Pixel, Motorola, and more. If it's a phone, we can almost certainly fix it.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" id="faq-question-data" aria-expanded="false" aria-controls="faq-answer-data">
             Is my data safe during the repair?
             <span class="faq-item__arrow">▼</span>
           </button>
-          <div class="faq-item__answer">
+          <div class="faq-item__answer" id="faq-answer-data" role="region" aria-labelledby="faq-question-data" aria-hidden="true">
             <p>Absolutely. We never access your personal data, photos, or accounts. For most repairs the phone stays locked the entire time. We recommend backing up your data before any repair as a general best practice.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button class="faq-item__question" id="faq-question-warranty" aria-expanded="false" aria-controls="faq-answer-warranty">
             What if the repair doesn't fix my phone?
             <span class="faq-item__arrow">▼</span>
           </button>
-          <div class="faq-item__answer">
+          <div class="faq-item__answer" id="faq-answer-warranty" role="region" aria-labelledby="faq-question-warranty" aria-hidden="true">
             <p>You pay nothing if we can't fix it. Our diagnostic is always free. If the repair doesn't solve the issue within our 90-day warranty window, we'll redo it or refund you — no hassle.</p>
           </div>
         </div>
@@ -337,7 +337,7 @@
           </div>
         </div>
       </div>
-      <form class="contact-form fade-in" id="contactForm" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <form class="contact-form fade-in" id="contactForm" name="contact" method="POST" action="/" data-netlify="true" data-form-provider="netlify" netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>Do not fill this out: <input name="bot-field" /></label>

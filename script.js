@@ -37,23 +37,29 @@ function initNavbarScroll(navbar, navLinks, sections, backToTopBtn) {
 function initMobileMenu(hamburger, navLinksMenu) {
   if (!hamburger || !navLinksMenu) return;
 
+  function setMenuOpen(isOpen) {
+    hamburger.classList.toggle("open", isOpen);
+    navLinksMenu.classList.toggle("open", isOpen);
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }
+
   hamburger.setAttribute("aria-expanded", "false");
   hamburger.setAttribute("aria-controls", "navLinks");
 
   hamburger.addEventListener("click", () => {
-    const isOpen = hamburger.classList.toggle("open");
-    navLinksMenu.classList.toggle("open", isOpen);
-    hamburger.setAttribute("aria-expanded", String(isOpen));
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    setMenuOpen(!hamburger.classList.contains("open"));
   });
 
   navLinksMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("open");
-      navLinksMenu.classList.remove("open");
-      hamburger.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    });
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !hamburger.classList.contains("open")) return;
+
+    setMenuOpen(false);
+    hamburger.focus();
   });
 }
 
@@ -82,22 +88,29 @@ function initRevealAnimations() {
   fadeNodes.forEach((node) => observer.observe(node));
 }
 
+function setFaqItemOpen(item, isOpen) {
+  const button = item.querySelector(".faq-item__question");
+  const answer = item.querySelector(".faq-item__answer");
+
+  item.classList.toggle("open", isOpen);
+  button.setAttribute("aria-expanded", String(isOpen));
+  answer.setAttribute("aria-hidden", String(!isOpen));
+}
+
 function initFaqAccordion() {
+  document.querySelectorAll(".faq-item").forEach((item) => setFaqItemOpen(item, false));
+
   document.querySelectorAll(".faq-item__question").forEach((button) => {
     button.addEventListener("click", () => {
       const item = button.closest(".faq-item");
       const isOpen = item.classList.contains("open");
 
       document.querySelectorAll(".faq-item").forEach((faqItem) => {
-        faqItem.classList.remove("open");
-        faqItem
-          .querySelector(".faq-item__question")
-          .setAttribute("aria-expanded", "false");
+        setFaqItemOpen(faqItem, false);
       });
 
       if (!isOpen) {
-        item.classList.add("open");
-        button.setAttribute("aria-expanded", "true");
+        setFaqItemOpen(item, true);
       }
     });
   });
@@ -212,7 +225,8 @@ function initContactForm() {
 
     try {
       const payload = new URLSearchParams(new FormData(form)).toString();
-      const response = await fetch("/", {
+      const endpoint = form.getAttribute("action") || "/";
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: payload,
