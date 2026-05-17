@@ -1,5 +1,7 @@
 # FixIt Pro — Phone Repair Landing Page
 
+[![CI](https://github.com/jirawagy-rgb/phone/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jirawagy-rgb/phone/actions/workflows/ci.yml)
+
 A static marketing and lead-generation landing page for **FixIt Pro**, a phone repair business based in Praha 3.
 
 ## What's on the page
@@ -25,7 +27,8 @@ A static marketing and lead-generation landing page for **FixIt Pro**, a phone r
 | Form handling | Netlify Forms (`data-netlify="true"`) |
 | Testing | Playwright smoke tests |
 | Linting | ESLint · Stylelint · HTMLHint |
-| CI | GitHub Actions on Node.js 20 |
+| CI | GitHub Actions (lint + smoke tests on Node.js 20 and 22) |
+| CD | GitHub Actions deploy to Netlify after successful CI on main |
 
 ---
 
@@ -80,11 +83,19 @@ npm run test:smoke    # Playwright smoke tests
 
 ## Deployment
 
-This site is built for **Netlify**.
+This site is deployed to **Netlify** via GitHub Actions.
 
-- Push to your connected branch — Netlify deploys automatically.
-- The contact form uses [Netlify Forms](https://docs.netlify.com/forms/setup/). No backend needed.
-- Submissions appear in the Netlify dashboard under **Forms**.
+- CI runs on every push and pull request.
+- CD deploy runs automatically after successful CI on branch `main`.
+- The deploy workflow is defined in `.github/workflows/cd.yml`.
+
+Required GitHub repository secrets:
+
+- `NETLIFY_AUTH_TOKEN`
+- `NETLIFY_SITE_ID`
+
+The contact form uses [Netlify Forms](https://docs.netlify.com/forms/setup/). No backend needed.
+Submissions appear in the Netlify dashboard under **Forms**.
 
 > If you deploy elsewhere (Vercel, GitHub Pages, plain hosting), the form will not work without a replacement backend. Update the `action` attribute on `#contactForm` and handle the POST endpoint on your server.
 
@@ -105,3 +116,5 @@ This site is built for **Netlify**.
 | `tests/e2e/smoke.spec.js` | Playwright smoke tests |
 | `tests/static-server.cjs` | Local dev/test server |
 | `.github/workflows/ci.yml` | GitHub Actions CI pipeline |
+| `.github/workflows/cd.yml` | GitHub Actions CD pipeline (Netlify deploy) |
+
