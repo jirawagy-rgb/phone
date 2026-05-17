@@ -1,5 +1,5 @@
 # Knowledge Base Index
-This index is the master entry point for the project knowledge base and links all topic and concept notes for fast retrieval.
+This index is the master entry point for the phone project knowledge base and links all topic and concept notes for fast retrieval.
 
 ## Topics
 - [Development and Deployment Workflows](./topics/development-and-deployment.md)
@@ -10,10 +10,12 @@ This index is the master entry point for the project knowledge base and links al
 - [User Interface and Content Components for Conversion](./topics/user-interface-and-content.md)
 
 ## Notes
+- [`initContactForm` Stable `ruleKeys` Iteration Pattern](./notes/init-contact-form-stable-rulekeys-iteration-pattern.md)
 - [Contact Form Client-Side Validation Rules and Error Rendering](./notes/contact-form-client-side-validation-rules.md)
 - [Contact Form Markup with Netlify Metadata and Honeypot Field](./notes/contact-form-markup-netlify-metadata-and-honeypot.md)
 - [Content Sections and Conversion Journey Map in src/index.html](./notes/content-sections-conversion-journey-map.md)
 - [createValidationRules Field Rule Map for Contact Form Validation](./notes/create-validation-rules-form-field-rule-map.md)
+- [Defensive DOM Guards and Reduced-Motion Animation Fallback in `src/js/main.js`](./notes/defensive-dom-guards-and-reduced-motion-animation-fallback.md)
 - [DOMContentLoaded Bootstrap Initializer Sequencing in src/js/main.js](./notes/domcontentloaded-bootstrap-initializer-sequencing.md)
 - [FAQ Accordion ARIA State Management and Single-Open Logic](./notes/faq-accordion-aria-state-management.md)
 - [GitHub Actions CI with Node 20 Lint and Smoke Checks](./notes/github-actions-ci-node20-lint-and-smoke.md)
@@ -46,9 +48,8 @@ This index is the master entry point for the project knowledge base and links al
 
 ## Source Coverage
 - Product and setup docs: `README.md`, `docs/**`
-- Runtime code: `src/index.html`, `src/js/main.js`, `src/styles/*.css`
+- Runtime code: `index.html`, `script.js`, `*.css`
 - Quality and delivery: `tests/**`, `.github/workflows/ci.yml`, `package.json`
 
 ## Maintenance
-- Regenerate this index with your KB rebuild command
-
+- Regenerate this index with `npm run kb:index`

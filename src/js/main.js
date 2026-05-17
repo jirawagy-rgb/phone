@@ -10,10 +10,13 @@ function setCurrentYear(yearNode) {
 
 function initNavbarScroll(navbar, navLinks, sections, backToTopBtn) {
   if (!navbar || !backToTopBtn) return;
+  const hasSectionTracking = navLinks.length > 0 && sections.length > 0;
 
   function onScroll() {
     navbar.classList.toggle("scrolled", window.scrollY > 40);
     backToTopBtn.classList.toggle("visible", window.scrollY > 400);
+
+    if (!hasSectionTracking) return;
 
     let current = "";
     sections.forEach((section) => {
@@ -67,18 +70,30 @@ function initRevealAnimations() {
   const fadeNodes = document.querySelectorAll(".fade-in");
   if (!fadeNodes.length) return;
 
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) {
+    fadeNodes.forEach((node) => node.classList.add("visible"));
+    return;
+  }
+
+  const staggeredParents = new WeakSet();
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
 
-        const siblings = entry.target.parentElement.querySelectorAll(".fade-in");
-        siblings.forEach((element, index) => {
-          const delay = index * 80;
-          setTimeout(() => element.classList.add("visible"), delay);
-        });
+        const parent = entry.target.parentElement;
+        if (parent && !staggeredParents.has(parent)) {
+          const siblings = parent.querySelectorAll(".fade-in");
+          siblings.forEach((element, index) => {
+            const delay = index * 80;
+            setTimeout(() => element.classList.add("visible"), delay);
+          });
+          staggeredParents.add(parent);
+        } else {
+          entry.target.classList.add("visible");
+        }
 
-        entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       });
     },
@@ -89,25 +104,33 @@ function initRevealAnimations() {
 }
 
 function setFaqItemOpen(item, isOpen) {
+  if (!item) return;
+
   const button = item.querySelector(".faq-item__question");
   const answer = item.querySelector(".faq-item__answer");
 
   item.classList.toggle("open", isOpen);
-  button.setAttribute("aria-expanded", String(isOpen));
-  answer.setAttribute("aria-hidden", String(!isOpen));
+  if (button) {
+    button.setAttribute("aria-expanded", String(isOpen));
+  }
+  if (answer) {
+    answer.setAttribute("aria-hidden", String(!isOpen));
+  }
 }
 
 function initFaqAccordion() {
-  document.querySelectorAll(".faq-item").forEach((item) => setFaqItemOpen(item, false));
+  const faqItems = document.querySelectorAll(".faq-item");
+  if (!faqItems.length) return;
+
+  faqItems.forEach((item) => setFaqItemOpen(item, false));
 
   document.querySelectorAll(".faq-item__question").forEach((button) => {
     button.addEventListener("click", () => {
       const item = button.closest(".faq-item");
+      if (!item) return;
       const isOpen = item.classList.contains("open");
 
-      document.querySelectorAll(".faq-item").forEach((faqItem) => {
-        setFaqItemOpen(faqItem, false);
-      });
+      faqItems.forEach((faqItem) => setFaqItemOpen(faqItem, false));
 
       if (!isOpen) {
         setFaqItemOpen(item, true);
@@ -173,6 +196,8 @@ function createValidationRules() {
 
 function validateField(rules, key) {
   const rule = rules[key];
+  if (!rule || !rule.el || !rule.err) return false;
+
   const value = rule.el.value;
   const valid = rule.test(value);
 
@@ -183,11 +208,17 @@ function validateField(rules, key) {
 }
 
 function setSubmitLoadingState(submitBtn, isLoading) {
+  if (!submitBtn) return;
+
   const buttonText = submitBtn.querySelector(".btn-text");
   const buttonSpinner = submitBtn.querySelector(".btn-spinner");
 
-  buttonText.hidden = isLoading;
-  buttonSpinner.hidden = !isLoading;
+  if (buttonText) {
+    buttonText.hidden = isLoading;
+  }
+  if (buttonSpinner) {
+    buttonSpinner.hidden = !isLoading;
+  }
   submitBtn.disabled = isLoading;
 }
 
@@ -200,11 +231,15 @@ function initContactForm() {
   if (!form || !submitBtn || !success || !fail) return;
 
   const rules = createValidationRules();
+  const ruleKeys = Object.keys(rules);
 
-  Object.keys(rules).forEach((key) => {
-    rules[key].el.addEventListener("blur", () => validateField(rules, key));
-    rules[key].el.addEventListener("input", () => {
-      if (rules[key].el.classList.contains("error")) {
+  ruleKeys.forEach((key) => {
+    const input = rules[key].el;
+    if (!input) return;
+
+    input.addEventListener("blur", () => validateField(rules, key));
+    input.addEventListener("input", () => {
+      if (input.classList.contains("error")) {
         validateField(rules, key);
       }
     });
@@ -213,7 +248,7 @@ function initContactForm() {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const allValid = Object.keys(rules)
+    const allValid = ruleKeys
       .map((key) => validateField(rules, key))
       .every(Boolean);
 
@@ -236,7 +271,12 @@ function initContactForm() {
 
       success.hidden = false;
       form.reset();
-      Object.keys(rules).forEach((key) => rules[key].el.classList.remove("error"));
+      ruleKeys.forEach((key) => {
+        const input = rules[key].el;
+        if (input) {
+          input.classList.remove("error");
+        }
+      });
     } catch {
       fail.hidden = false;
     } finally {
