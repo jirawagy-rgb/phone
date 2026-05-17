@@ -10,7 +10,8 @@
     "lint:html": "htmlhint index.html",
     "serve": "node tests/static-server.cjs",
     "test:smoke": "playwright test -c playwright.config.cjs",
-    "check": "npm run lint && npm run test:smoke"
+    "check": "npm run lint && npm run test:smoke",
+    "kb:index": "node scripts/rebuild-kb-index.cjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
