@@ -8,4 +8,5 @@ The services grid uses repeatable card units to encode repair taxonomy and “fr
 
 Related: [[user-interface-and-content]], [[content-sections-conversion-journey-map]], [[reveal-animations-with-intersection-observer]]
 
-Markup anchor: `section#services` with `.services__grid` and `.service-card` in `index.html`.
+Markup anchor: `section#services` with `.services__grid` and `.service-card` in `src/index.html`.
+

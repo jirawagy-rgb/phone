@@ -8,4 +8,5 @@ Testimonial cards standardize star rating, narrative, and attributed customer co
 
 Related: [[user-interface-and-content]], [[content-sections-conversion-journey-map]], [[pricing-cards-tiering-and-feature-comparison-pattern]]
 
-Markup anchor: `section#testimonials` with `.testimonial-card` entries in `index.html`.
+Markup anchor: `section#testimonials` with `.testimonial-card` entries in `src/index.html`.
+

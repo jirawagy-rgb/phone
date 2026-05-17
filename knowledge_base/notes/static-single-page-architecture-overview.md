@@ -8,4 +8,5 @@ The project uses a static single-page architecture to keep setup, hosting, and c
 
 Related: [[runtime-architecture]], [[javascript-domcontentloaded-initialization-flow]], [[modular-css-layering-import-order-strategy]], [[quality-gates-and-ci-decision-record]]
 
-Source anchors: `docs/adr/0001-static-single-page-architecture.md`, `index.html`, `script.js`.
+Source anchors: `docs/adr/0001-static-single-page-architecture.md`, `src/index.html`, `src/js/main.js`.
+

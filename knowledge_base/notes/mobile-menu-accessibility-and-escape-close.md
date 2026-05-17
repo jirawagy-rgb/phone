@@ -8,4 +8,5 @@ The mobile menu toggle syncs visual state (`open` class), ARIA state (`aria-expa
 
 Related: [[user-interface-and-content]], [[navbar-scroll-state-and-active-link-highlighting]], [[playwright-smoke-tests-core-user-flows]]
 
-Implementation anchors: `initMobileMenu` in `script.js`, elements `#hamburger` and `#navLinks` in `index.html`.
+Implementation anchors: `initMobileMenu` in `src/js/main.js`, elements `#hamburger` and `#navLinks` in `src/index.html`.
+

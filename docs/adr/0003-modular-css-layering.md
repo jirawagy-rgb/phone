@@ -9,13 +9,13 @@ The page includes many visual blocks (hero, grids, cards, FAQ, form, footer) tha
 
 ## Decision
 
-Keep CSS split into layers and import in a stable order via `styles.css`:
+Keep CSS split into layers and import in a stable order via `src/styles/styles.css`:
 
-1. `base.css` (tokens, reset, shared primitives)
-2. `layout.css` (global layout structures)
-3. `sections.css` (section-level wrappers)
-4. `components.css` (reusable UI blocks)
-5. `responsive.css` (breakpoint overrides)
+1. `src/styles/base.css` (tokens, reset, shared primitives)
+2. `src/styles/layout.css` (global layout structures)
+3. `src/styles/sections.css` (section-level wrappers)
+4. `src/styles/components.css` (reusable UI blocks)
+5. `src/styles/responsive.css` (breakpoint overrides)
 
 ## Consequences
 
@@ -37,3 +37,4 @@ Revisit this decision if:
 - CSS bundle grows large enough to require tooling-driven splitting
 - Design system tokens move to a dedicated package
 - Team standardizes on CSS-in-JS or utility-first frameworks
+

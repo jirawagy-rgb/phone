@@ -45,7 +45,7 @@ Execution path:
 Primary path:
 
 1. User submits `#contactForm`
-2. `script.js` validates required fields client-side
+2. `src/js/main.js` validates required fields client-side
 3. Payload is encoded as `application/x-www-form-urlencoded`
 4. `fetch` POST is sent to `action` endpoint (default `/`)
 5. UI displays success (`#formSuccess`) or failure (`#formFail`)
@@ -69,3 +69,4 @@ If changing host:
 - Keep static asset serving behavior
 - Replace form endpoint/integration if native form capture is unavailable
 - Re-run smoke tests after migration
+

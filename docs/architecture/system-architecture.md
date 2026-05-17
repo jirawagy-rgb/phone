@@ -6,14 +6,14 @@ This document visualizes the FixIt Pro landing page architecture and the deliver
 
 ```mermaid
 flowchart TD
-    U[User Browser] --> H[index.html]
-    H --> C[styles.css]
-    C --> B[base.css]
-    C --> L[layout.css]
-    C --> S[sections.css]
-    C --> P[components.css]
-    C --> R[responsive.css]
-    H --> J[script.js]
+    U[User Browser] --> H[src/index.html]
+    H --> C[src/styles/styles.css]
+    C --> B[src/styles/base.css]
+    C --> L[src/styles/layout.css]
+    C --> S[src/styles/sections.css]
+    C --> P[src/styles/components.css]
+    C --> R[src/styles/responsive.css]
+    H --> J[src/js/main.js]
 
     J --> N1[Navbar + scroll state]
     J --> N2[Mobile menu]
@@ -46,9 +46,9 @@ flowchart LR
     CI --> S3[npm run check]
 
     S3 --> LINT[Lint stage]
-    LINT --> E[ESLint script.js]
-    LINT --> ST[Stylelint *.css]
-    LINT --> HINT[HTMLHint index.html]
+    LINT --> E[ESLint src/js/main.js]
+    LINT --> ST[Stylelint src/styles/*.css]
+    LINT --> HINT[HTMLHint src/index.html]
 
     S3 --> SMOKE[Playwright smoke tests]
     SMOKE --> A1[Core sections visible]
@@ -63,3 +63,4 @@ flowchart LR
 - The runtime is intentionally static and single-page.
 - JavaScript behavior is organized as initializer functions called on `DOMContentLoaded`.
 - Form handling is provider-compatible in production and mockable in local tests.
+

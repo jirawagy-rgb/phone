@@ -8,4 +8,5 @@ The navbar logic adds a `scrolled` class after 40px, toggles back-to-top visibil
 
 Related: [[runtime-architecture]], [[mobile-menu-accessibility-and-escape-close]], [[playwright-smoke-tests-core-user-flows]]
 
-Implementation anchor: `initNavbarScroll` in `script.js` with passive scroll listener.
+Implementation anchor: `initNavbarScroll` in `src/js/main.js` with passive scroll listener.
+

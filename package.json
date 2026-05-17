@@ -5,9 +5,9 @@
   "description": "Static landing page for FixIt Pro phone repair business",
   "scripts": {
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
-    "lint:js": "eslint script.js",
-    "lint:css": "stylelint \"*.css\"",
-    "lint:html": "htmlhint index.html",
+    "lint:js": "eslint src/js/main.js",
+    "lint:css": "stylelint \"src/styles/*.css\"",
+    "lint:html": "htmlhint src/index.html",
     "serve": "node tests/static-server.cjs",
     "test:smoke": "playwright test -c playwright.config.cjs",
     "check": "npm run lint && npm run test:smoke",

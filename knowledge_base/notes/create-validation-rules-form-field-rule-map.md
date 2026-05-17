@@ -8,4 +8,5 @@ created: 2026-05-17
 
 Related: [[form-integration]], [[contact-form-client-side-validation-rules]], [[validate-field-error-class-and-message-rendering]]
 
-Implementation anchor: `createValidationRules()` in `script.js`.
+Implementation anchor: `createValidationRules()` in `src/js/main.js`.
+

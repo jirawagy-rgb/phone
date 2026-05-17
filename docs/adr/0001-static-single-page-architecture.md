@@ -11,9 +11,9 @@ The product is a marketing and lead-generation website with a single primary use
 
 Use a static single-page architecture:
 
-- One HTML entry point (`index.html`)
-- Client-side behavior in one JavaScript file (`script.js`)
-- CSS split by concern and imported through `styles.css`
+- One HTML entry point (`src/index.html`)
+- Client-side behavior in one JavaScript file (`src/js/main.js`)
+- CSS split by concern and imported through `src/styles/styles.css`
 - No runtime backend dependency for rendering
 
 ## Consequences
@@ -37,3 +37,4 @@ Revisit this decision if any of these become true:
 - Multi-page SEO strategy is required
 - Authenticated user journeys are introduced
 - Server-side business logic is needed
+

@@ -8,4 +8,5 @@ created: 2026-05-17
 
 Related: [[form-integration]], [[create-validation-rules-form-field-rule-map]], [[init-contact-form-async-submit-and-feedback-states]]
 
-Implementation anchor: `validateField(rules, key)` in `script.js`.
+Implementation anchor: `validateField(rules, key)` in `src/js/main.js`.
+

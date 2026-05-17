@@ -11,8 +11,8 @@ This project is mostly static code where regressions are usually visual or behav
 
 Use a combined quality gate pipeline:
 
-- Linting: ESLint (`script.js`), Stylelint (`*.css`), HTMLHint (`index.html`)
-- Browser smoke coverage: Playwright tests (`tests/smoke.spec.js`)
+- Linting: ESLint (`src/js/main.js`), Stylelint (`src/styles/*.css`), HTMLHint (`src/index.html`)
+- Browser smoke coverage: Playwright tests (`tests/e2e/smoke.spec.js`)
 - CI orchestration: GitHub Actions workflow at `.github/workflows/ci.yml`
 - Single developer command: `npm run check`
 
@@ -36,3 +36,4 @@ Revisit this decision if:
 - Regression rate increases and requires broader end-to-end coverage
 - Additional environments (staging/prod previews) require dedicated test jobs
 - Team introduces visual regression tooling
+

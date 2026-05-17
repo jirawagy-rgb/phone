@@ -8,4 +8,5 @@ created: 2026-05-17
 
 Related: [[user-interface-and-content]], [[mobile-menu-accessibility-and-escape-close]], [[init-smooth-scroll-anchor-offset-navigation]]
 
-Implementation anchor: `initMobileMenu(hamburger, navLinksMenu)` in `script.js`.
+Implementation anchor: `initMobileMenu(hamburger, navLinksMenu)` in `src/js/main.js`.
+

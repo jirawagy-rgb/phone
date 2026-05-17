@@ -8,4 +8,5 @@ created: 2026-05-17
 
 Related: [[form-integration]], [[init-contact-form-async-submit-and-feedback-states]], [[netlify-compatible-form-post-submission-pattern]]
 
-Implementation anchor: `setSubmitLoadingState(submitBtn, isLoading)` in `script.js`.
+Implementation anchor: `setSubmitLoadingState(submitBtn, isLoading)` in `src/js/main.js`.
+

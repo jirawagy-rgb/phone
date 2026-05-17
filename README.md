@@ -94,14 +94,14 @@ This site is built for **Netlify**.
 
 | File | Purpose |
 |---|---|
-| `index.html` | All page content and markup |
-| `script.js` | All browser behaviour (menu, FAQ, form, animations) |
-| `styles.css` | CSS entrypoint — imports the files below |
-| `base.css` | Design tokens, reset, buttons, animations |
-| `layout.css` | Navbar and hero layout |
-| `sections.css` | Section grids, contact, footer layout |
-| `components.css` | Cards, FAQ, form, social, back-to-top |
-| `responsive.css` | Mobile and tablet breakpoints |
-| `tests/smoke.spec.js` | Playwright smoke tests |
+| `src/index.html` | All page content and markup |
+| `src/js/main.js` | All browser behaviour (menu, FAQ, form, animations) |
+| `src/styles/styles.css` | CSS entrypoint — imports the files below |
+| `src/styles/base.css` | Design tokens, reset, buttons, animations |
+| `src/styles/layout.css` | Navbar and hero layout |
+| `src/styles/sections.css` | Section grids, contact, footer layout |
+| `src/styles/components.css` | Cards, FAQ, form, social, back-to-top |
+| `src/styles/responsive.css` | Mobile and tablet breakpoints |
+| `tests/e2e/smoke.spec.js` | Playwright smoke tests |
 | `tests/static-server.cjs` | Local dev/test server |
 | `.github/workflows/ci.yml` | GitHub Actions CI pipeline |

@@ -8,4 +8,5 @@ created: 2026-05-17
 
 Related: [[form-integration]], [[netlify-compatible-form-post-submission-pattern]], [[set-submit-loading-state-button-spinner-toggle]], [[validate-field-error-class-and-message-rendering]]
 
-Implementation anchor: `initContactForm()` in `script.js` and form nodes `#contactForm`, `#formSuccess`, `#formFail` in `index.html`.
+Implementation anchor: `initContactForm()` in `src/js/main.js` and form nodes `#contactForm`, `#formSuccess`, `#formFail` in `src/index.html`.
+

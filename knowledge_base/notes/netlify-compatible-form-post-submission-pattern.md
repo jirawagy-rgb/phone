@@ -8,4 +8,5 @@ The contact form posts `application/x-www-form-urlencoded` payloads generated fr
 
 Related: [[form-integration]], [[contact-form-client-side-validation-rules]], [[netlify-deployment-and-form-ingestion-assumptions]]
 
-Implementation anchors: `initContactForm` in `script.js` and `<form id="contactForm">` in `index.html`.
+Implementation anchors: `initContactForm` in `src/js/main.js` and `<form id="contactForm">` in `src/index.html`.
+

@@ -8,4 +8,5 @@ created: 2026-05-17
 
 Related: [[runtime-architecture]], [[init-navbar-scroll-threshold-and-active-section-mapping]], [[mobile-menu-accessibility-and-escape-close]]
 
-Implementation anchor: `initSmoothScroll(navbar)` in `script.js`.
+Implementation anchor: `initSmoothScroll(navbar)` in `src/js/main.js`.
+

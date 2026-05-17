@@ -8,4 +8,5 @@ The `setCurrentYear` function centralizes footer year rendering so legal metadat
 
 Related: [[runtime-architecture]], [[javascript-domcontentloaded-initialization-flow]], [[domcontentloaded-bootstrap-initializer-sequencing]]
 
-Implementation anchor: `setCurrentYear(yearNode)` in `script.js` and `#currentYear` in `index.html`.
+Implementation anchor: `setCurrentYear(yearNode)` in `src/js/main.js` and `#currentYear` in `src/index.html`.
+

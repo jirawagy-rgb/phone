@@ -8,4 +8,5 @@ created: 2026-05-17
 
 Related: [[user-interface-and-content]], [[init-navbar-scroll-threshold-and-active-section-mapping]], [[playwright-smoke-tests-core-user-flows]]
 
-Implementation anchor: `initBackToTop(backToTopBtn)` in `script.js` and button `#backToTop` in `index.html`.
+Implementation anchor: `initBackToTop(backToTopBtn)` in `src/js/main.js` and button `#backToTop` in `src/index.html`.
+

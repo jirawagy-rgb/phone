@@ -8,4 +8,5 @@ The FAQ component enforces single-open behavior and keeps accessibility state sy
 
 Related: [[user-interface-and-content]], [[javascript-domcontentloaded-initialization-flow]], [[playwright-smoke-tests-core-user-flows]]
 
-Implementation anchors: `setFaqItemOpen` and `initFaqAccordion` in `script.js`.
+Implementation anchors: `setFaqItemOpen` and `initFaqAccordion` in `src/js/main.js`.
+

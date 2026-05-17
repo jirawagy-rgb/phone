@@ -8,4 +8,5 @@ Pricing cards package repairs into three decision tiers with feature lists and r
 
 Related: [[user-interface-and-content]], [[content-sections-conversion-journey-map]], [[hero-section-value-proposition-and-cta-structure]]
 
-Markup anchor: `section#pricing` with `.pricing-card` and `.pricing-card--featured` in `index.html`.
+Markup anchor: `section#pricing` with `.pricing-card` and `.pricing-card--featured` in `src/index.html`.
+

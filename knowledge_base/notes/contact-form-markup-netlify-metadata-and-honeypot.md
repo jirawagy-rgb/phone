@@ -8,4 +8,5 @@ The contact form markup embeds static-host submission metadata (`data-netlify`, 
 
 Related: [[form-integration]], [[netlify-compatible-form-post-submission-pattern]], [[init-contact-form-async-submit-and-feedback-states]]
 
-Markup anchor: `form#contactForm` attributes and hidden bot field block in `index.html`.
+Markup anchor: `form#contactForm` attributes and hidden bot field block in `src/index.html`.
+

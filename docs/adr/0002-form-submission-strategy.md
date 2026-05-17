@@ -12,7 +12,7 @@ The contact form must collect leads without building and operating a custom back
 Use a provider-compatible POST approach driven by HTML + client JavaScript:
 
 - Keep form metadata in HTML (`name="contact"`, hidden `form-name`, honeypot field)
-- Submit via `fetch` with `URLSearchParams` payload in `script.js`
+- Submit via `fetch` with `URLSearchParams` payload in `src/js/main.js`
 - Show user feedback in-page (`#formSuccess`, `#formFail`)
 - Keep a mock-compatible endpoint (`/`) for local smoke tests
 
@@ -37,3 +37,4 @@ Revisit this decision if:
 - Leads must integrate into custom CRM workflows with strict validation
 - Multi-step form logic or file uploads are required
 - Deployment target changes to hosting without native form handling
+

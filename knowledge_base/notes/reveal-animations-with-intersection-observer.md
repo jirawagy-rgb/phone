@@ -8,4 +8,5 @@ Section cards and blocks tagged with `.fade-in` are revealed as they intersect t
 
 Related: [[user-interface-and-content]], [[javascript-domcontentloaded-initialization-flow]], [[content-sections-conversion-journey-map]]
 
-Implementation anchor: `initRevealAnimations` in `script.js`.
+Implementation anchor: `initRevealAnimations` in `src/js/main.js`.
+

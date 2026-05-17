@@ -8,4 +8,5 @@ created: 2026-05-17
 
 Related: [[runtime-architecture]], [[navbar-scroll-state-and-active-link-highlighting]], [[init-back-to-top-smooth-scroll-control]]
 
-Implementation anchor: `initNavbarScroll(navbar, navLinks, sections, backToTopBtn)` in `script.js`.
+Implementation anchor: `initNavbarScroll(navbar, navLinks, sections, backToTopBtn)` in `src/js/main.js`.
+

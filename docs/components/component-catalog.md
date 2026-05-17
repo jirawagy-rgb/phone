@@ -4,9 +4,9 @@ This document maps key components to their structure, behavior, and integration 
 
 ## Runtime Composition
 
-- Markup shell: `index.html`
-- Behavior layer: `script.js`
-- Styling layers: `base.css`, `layout.css`, `sections.css`, `components.css`, `responsive.css`
+- Markup shell: `src/index.html`
+- Behavior layer: `src/js/main.js`
+- Styling layers: `src/styles/base.css`, `src/styles/layout.css`, `src/styles/sections.css`, `src/styles/components.css`, `src/styles/responsive.css`
 
 ## Components
 
@@ -14,7 +14,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchors: `#navbar`, `#navLinks`, `#hamburger`
 - Behavior: `initNavbarScroll`, `initMobileMenu`, `initSmoothScroll`
-- Style owners: `layout.css`, `responsive.css`
+- Style owners: `src/styles/layout.css`, `src/styles/responsive.css`
 - Responsibilities:
   - Sticky navigation with scrolled state
   - Active link highlighting by viewport section
@@ -24,7 +24,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchor: `#home`
 - Behavior: smooth-scroll CTA interaction
-- Style owners: `layout.css`, `base.css`
+- Style owners: `src/styles/layout.css`, `src/styles/base.css`
 - Responsibilities:
   - Primary value proposition and trust signals
   - Main conversion CTAs to services/contact
@@ -33,7 +33,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchor: `#services`
 - Behavior: reveal animation via `.fade-in`
-- Style owners: `sections.css`, `components.css`
+- Style owners: `src/styles/sections.css`, `src/styles/components.css`
 - Responsibilities:
   - Present service scope and pricing entry points
 
@@ -41,7 +41,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchor: `#why-us`
 - Behavior: reveal animation via `.fade-in`
-- Style owners: `sections.css`, `components.css`
+- Style owners: `src/styles/sections.css`, `src/styles/components.css`
 - Responsibilities:
   - Communicate differentiators (speed, warranty, trust)
 
@@ -49,7 +49,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchor: `#pricing`
 - Behavior: reveal animation via `.fade-in`
-- Style owners: `sections.css`, `components.css`
+- Style owners: `src/styles/sections.css`, `src/styles/components.css`
 - Responsibilities:
   - Package service types into decision-ready pricing tiers
 
@@ -57,7 +57,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchor: `#testimonials`
 - Behavior: reveal animation via `.fade-in`
-- Style owners: `sections.css`, `components.css`
+- Style owners: `src/styles/sections.css`, `src/styles/components.css`
 - Responsibilities:
   - Social proof and conversion confidence
 
@@ -65,7 +65,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchor: `#faq`
 - Behavior: `initFaqAccordion`, `setFaqItemOpen`
-- Style owners: `components.css`, `sections.css`
+- Style owners: `src/styles/components.css`, `src/styles/sections.css`
 - Responsibilities:
   - Single-open accordion interaction
   - ARIA state syncing (`aria-expanded`, `aria-hidden`)
@@ -74,7 +74,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchors: `#contact`, `#contactForm`, `#submitBtn`, `#formSuccess`, `#formFail`
 - Behavior: `initContactForm`, `createValidationRules`, `validateField`, `setSubmitLoadingState`
-- Style owners: `components.css`, `sections.css`
+- Style owners: `src/styles/components.css`, `src/styles/sections.css`
 - Responsibilities:
   - Client-side validation for required fields
   - Async form submission and loading state
@@ -84,7 +84,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchor: `#currentYear`
 - Behavior: `setCurrentYear`
-- Style owners: `sections.css`
+- Style owners: `src/styles/sections.css`
 - Responsibilities:
   - Brand/support links and legal footer metadata
 
@@ -92,14 +92,14 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup anchor: `#backToTop`
 - Behavior: `initBackToTop`, `initNavbarScroll`
-- Style owners: `components.css`
+- Style owners: `src/styles/components.css`
 - Responsibilities:
   - Contextual visibility after scroll threshold
   - Smooth scroll back to page start
 
 ## Quality Coverage Mapping
 
-- Smoke coverage: `tests/smoke.spec.js`
+- Smoke coverage: `tests/e2e/smoke.spec.js`
 - Current covered behaviors:
   - Core sections visible on load
   - Year text populated
@@ -109,3 +109,4 @@ This document maps key components to their structure, behavior, and integration 
 - Coverage gap examples:
   - FAQ interaction behavior not currently asserted
   - Back-to-top button visibility/behavior not currently asserted
+
