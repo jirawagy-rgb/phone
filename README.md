@@ -88,6 +88,7 @@ This site is deployed to **Netlify** via GitHub Actions.
 - CI runs on every push and pull request.
 - CD deploy runs automatically after successful CI on branch `main`.
 - The deploy workflow is defined in `.github/workflows/cd.yml`.
+- Public production URL: **https://snapservis.netlify.app**
 
 Required GitHub repository secrets:
 
