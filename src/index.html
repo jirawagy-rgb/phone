@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fast, affordable phone repair. Screen replacements, battery swaps, water damage — fixed same day. Walk-ins welcome." />
-  <meta property="og:title" content="FixIt Pro — Phone Repair Experts" />
-  <meta property="og:description" content="Your phone fixed fast. Same-day repairs, warranty included." />
+  <meta name="description" content="Rychlý a levný servis telefonů. Výměna displeje, baterie, oprava poškození vodou — opraveno v den příjmu. Přijďte i bez objednání." />
+  <meta property="og:title" content="FixIt Pro — Experti na opravu telefonů" />
+  <meta property="og:description" content="Váš telefon opravíme rychle. Opravy v den příjmu, záruka v ceně." />
   <meta property="og:type" content="website" />
-  <title>FixIt Pro — Phone Repair Experts</title>
+  <title>FixIt Pro — Experti na opravu telefonů</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -22,13 +22,13 @@
         <span class="logo-icon">🔧</span>
         <span>FixIt<strong>Pro</strong></span>
       </a>
-      <nav class="navbar__links" id="navLinks" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn--nav">Get a Quote</a>
+      <nav class="navbar__links" id="navLinks" aria-label="Hlavní navigace">
+        <a href="#services">Služby</a>
+        <a href="#why-us">Proč my</a>
+        <a href="#pricing">Ceník</a>
+        <a href="#testimonials">Recenze</a>
+        <a href="#faq">Časté dotazy</a>
+        <a href="#contact" class="btn btn--nav">Získat nabídku</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -40,27 +40,65 @@
   <section class="hero" id="home">
     <div class="hero__bg-grid"></div>
     <div class="container hero__inner">
-      <div class="hero__badge">⚡ Same-Day Repairs Available</div>
+      <div class="hero__badge">⚡ Opravy v den příjmu k dispozici</div>
       <h1 class="hero__title">
-        Your Phone,<br />
-        <span class="gradient-text">Fixed Fast.</span>
+        Váš telefon,<br />
+        <span class="gradient-text">Opraven rychle.</span>
       </h1>
       <p class="hero__subtitle">
-        Cracked screen? Dead battery? Water damage? We fix all major brands —
-        iPhone, Samsung, Xiaomi and more. Most repairs done in under 60 minutes.
+        Prasklý displej? Vybitá baterie? Poškození vodou? Opravujeme všechny hlavní značky —
+        iPhone, Samsung, Xiaomi a další. Většina oprav hotova do 60 minut.
       </p>
       <div class="hero__cta-group">
-        <a href="#contact" class="btn btn--primary btn--lg">Get a Free Quote</a>
-        <a href="#services" class="btn btn--ghost btn--lg">See All Services</a>
+        <a href="#contact" class="btn btn--primary btn--lg">Získat nabídku zdarma</a>
+        <a href="#services" class="btn btn--ghost btn--lg">Zobrazit všechny služby</a>
       </div>
       <div class="hero__trust-bar">
-        <div class="trust-item"><span class="trust-num">2,400+</span><span>Repairs Done</span></div>
+        <div class="trust-item"><span class="trust-num">2 400+</span><span>Hotových oprav</span></div>
         <div class="trust-divider"></div>
-        <div class="trust-item"><span class="trust-num">4.9★</span><span>Google Rating</span></div>
+        <div class="trust-item"><span class="trust-num">4.9★</span><span>Hodnocení na Google</span></div>
         <div class="trust-divider"></div>
-        <div class="trust-item"><span class="trust-num">90 Day</span><span>Warranty</span></div>
+        <div class="trust-item"><span class="trust-num">90 dní</span><span>Záruka</span></div>
         <div class="trust-divider"></div>
-        <div class="trust-item"><span class="trust-num">60 min</span><span>Avg. Repair Time</span></div>
+        <div class="trust-item"><span class="trust-num">60 min</span><span>Průměrná doba opravy</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ PROBLEM ═══════ -->
+  <section class="section problem" id="problem">
+    <div class="container problem__inner">
+      <div class="problem__image fade-in">
+        <div class="skeleton-image">
+          <span>Vizuál rozbitého telefonu</span>
+        </div>
+      </div>
+      <div class="problem__content fade-in">
+        <span class="section-tag">Problém</span>
+        <h2>Je toto váš problém?</h2>
+        <p>Řešit rozbitý telefon je stresující. Víme, jaké to je, když je vaše spojení se světem přerušeno.</p>
+        <ul class="problem__list">
+          <li>❌ Rozbitý displej nebo nereagující dotyk</li>
+          <li>❌ Baterie se vybíjí uprostřed dne</li>
+          <li>❌ Telefon se vůbec nezapne nebo nenabíjí</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ SOLUTION ══════ -->
+  <section class="section solution" id="solution">
+    <div class="container solution__inner">
+      <div class="solution__content fade-in">
+        <span class="section-tag">Řešení</span>
+        <h2>FixIt Pro vás vrátí zpět online</h2>
+        <p>Naši certifikovaní technici dokážou diagnostikovat a opravit většinu problémů do hodiny. Používáme pouze prémiové díly, aby váš telefon fungoval jako nový.</p>
+        <a href="#contact" class="btn btn--primary">Získat nabídku zdarma</a>
+      </div>
+      <div class="solution__image fade-in">
+        <div class="skeleton-image">
+          <span>Vizuál opraveného telefonu</span>
+        </div>
       </div>
     </div>
   </section>
@@ -69,46 +107,46 @@
   <section class="section services" id="services">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-tag">What We Fix</span>
-        <h2>Our Repair Services</h2>
-        <p>Professional repairs for all major brands using premium-quality parts.</p>
+        <span class="section-tag">Co opravujeme</span>
+        <h2>Naše servisní služby</h2>
+        <p>Profesionální opravy pro všechny hlavní značky s použitím dílů prémiové kvality.</p>
       </div>
       <div class="services__grid">
         <div class="service-card fade-in">
           <div class="service-card__icon">📱</div>
-          <h3>Screen Replacement</h3>
-          <p>Cracked or shattered display? We replace screens with OEM-quality glass. Looks and feels brand new.</p>
-          <span class="service-card__tag">From $49</span>
+          <h3>Výměna displeje</h3>
+          <p>Prasklý nebo rozbitý displej? Vyměníme displeje za skla v kvalitě OEM. Vypadá a působí jako nový.</p>
+          <span class="service-card__tag">Od 1 190 Kč</span>
         </div>
         <div class="service-card fade-in">
           <div class="service-card__icon">🔋</div>
-          <h3>Battery Replacement</h3>
-          <p>Slow charging or rapid drain? A new battery brings your phone back to full-day performance.</p>
-          <span class="service-card__tag">From $29</span>
+          <h3>Výměna baterie</h3>
+          <p>Pomalé nabíjení nebo rychlé vybíjení? Nová baterie vrátí vašemu telefonu celodenní výkon.</p>
+          <span class="service-card__tag">Od 690 Kč</span>
         </div>
         <div class="service-card fade-in">
           <div class="service-card__icon">💧</div>
-          <h3>Water Damage Recovery</h3>
-          <p>Dropped it in water? Don't panic. Our drying and cleaning process saves most water-damaged devices.</p>
-          <span class="service-card__tag">From $59</span>
+          <h3>Záchrana poškození vodou</h3>
+          <p>Spadl vám do vody? Nepropadejte panice. Náš proces sušení a čištění zachrání většinu zařízení poškozených vodou.</p>
+          <span class="service-card__tag">Od 1 390 Kč</span>
         </div>
         <div class="service-card fade-in">
           <div class="service-card__icon">📷</div>
-          <h3>Camera Repair</h3>
-          <p>Blurry photos or broken lens? We replace front and rear camera modules for crystal-clear shots.</p>
-          <span class="service-card__tag">From $39</span>
+          <h3>Oprava fotoaparátu</h3>
+          <p>Rozmazané fotky nebo rozbitý objektiv? Vyměníme moduly předního i zadního fotoaparátu pro křišťálově čisté snímky.</p>
+          <span class="service-card__tag">Od 890 Kč</span>
         </div>
         <div class="service-card fade-in">
           <div class="service-card__icon">🔌</div>
-          <h3>Charging Port Fix</h3>
-          <p>Phone not charging? We clean or replace faulty charging ports quickly and reliably.</p>
-          <span class="service-card__tag">From $25</span>
+          <h3>Oprava nabíjecího portu</h3>
+          <p>Telefon se nenabíjí? Vyčistíme nebo vyměníme vadné nabíjecí porty rychle a spolehlivě.</p>
+          <span class="service-card__tag">Od 590 Kč</span>
         </div>
         <div class="service-card fade-in">
           <div class="service-card__icon">🔊</div>
-          <h3>Speaker & Mic Repair</h3>
-          <p>Can't hear calls or be heard? We diagnose and replace speakers and microphones on the spot.</p>
-          <span class="service-card__tag">From $25</span>
+          <h3>Oprava reproduktoru a mikrofonu</h3>
+          <p>Neslyšíte hovory nebo vás není slyšet? Diagnostikujeme a vyměníme reproduktory a mikrofony na místě.</p>
+          <span class="service-card__tag">Od 590 Kč</span>
         </div>
       </div>
     </div>
@@ -118,40 +156,40 @@
   <section class="section why-us" id="why-us">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-tag">Why FixIt Pro</span>
-        <h2>Repair You Can Trust</h2>
-        <p>We're not just fast — we're reliable, transparent, and stand behind our work.</p>
+        <span class="section-tag">Proč FixIt Pro</span>
+        <h2>Servis, kterému můžete věřit</h2>
+        <p>Nejsme jen rychlí — jsme spolehliví, transparentní a stojíme si za svou prací.</p>
       </div>
       <div class="why-us__grid">
         <div class="why-card fade-in">
           <div class="why-card__icon">⚡</div>
-          <h3>Same-Day Service</h3>
-          <p>Most repairs completed within 60 minutes. Walk in, wait, walk out fixed.</p>
+          <h3>Servis v den příjmu</h3>
+          <p>Většina oprav dokončena do 60 minut. Přijďte, počkejte, odejděte s opraveným.</p>
         </div>
         <div class="why-card fade-in">
           <div class="why-card__icon">🛡️</div>
-          <h3>90-Day Warranty</h3>
-          <p>Every repair comes with a 90-day parts & labor warranty. No questions asked.</p>
+          <h3>90denní záruka</h3>
+          <p>Každá oprava přichází s 90denní zárukou na díly a práci. Bez otázek.</p>
         </div>
         <div class="why-card fade-in">
           <div class="why-card__icon">💎</div>
-          <h3>Premium Parts Only</h3>
-          <p>We use OEM or Grade-A quality parts. No cheap knock-offs — ever.</p>
+          <h3>Pouze prémiové díly</h3>
+          <p>Používáme díly v kvalitě OEM nebo Grade-A. Žádné levné napodobeniny — nikdy.</p>
         </div>
         <div class="why-card fade-in">
           <div class="why-card__icon">💰</div>
-          <h3>Price Match Guarantee</h3>
-          <p>Found it cheaper? Show us the quote and we'll beat it or match it.</p>
+          <h3>Garance nejlepší ceny</h3>
+          <p>Našli jste to levněji? Ukažte nám nabídku a my ji dorovnáme nebo překonáme.</p>
         </div>
         <div class="why-card fade-in">
           <div class="why-card__icon">🔒</div>
-          <h3>Data Safe & Private</h3>
-          <p>Your data stays yours. We never access personal files or accounts.</p>
+          <h3>Data v bezpečí a soukromí</h3>
+          <p>Vaše data zůstávají vaše. Nikdy nepřistupujeme k osobním souborům nebo účtům.</p>
         </div>
         <div class="why-card fade-in">
           <div class="why-card__icon">🏆</div>
-          <h3>Certified Technicians</h3>
-          <p>Our team is fully trained and certified. 5+ years average experience.</p>
+          <h3>Certifikovaní technici</h3>
+          <p>Náš tým je plně proškolen a certifikován. Průměrná praxe více než 5 let.</p>
         </div>
       </div>
     </div>
@@ -161,56 +199,96 @@
   <section class="section pricing" id="pricing">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-tag">Transparent Pricing</span>
-        <h2>No Hidden Fees. Ever.</h2>
-        <p>You get an exact quote before we touch your phone. You decide.</p>
+        <span class="section-tag">Transparentní ceny</span>
+        <h2>Žádné skryté poplatky. Nikdy.</h2>
+        <p>Přesnou nabídku dostanete dříve, než se dotkneme vašeho telefonu. Vy rozhodujete.</p>
       </div>
       <div class="pricing__grid">
         <div class="pricing-card fade-in">
           <div class="pricing-card__header">
-            <h3>Basic Fix</h3>
-            <p>Simple repairs & diagnostics</p>
+            <h3>Základní oprava</h3>
+            <p>Jednoduché opravy a diagnostika</p>
           </div>
-          <div class="pricing-card__price"><span>From</span>$25</div>
+          <div class="pricing-card__price"><span>Od</span>590 Kč</div>
           <ul class="pricing-card__features">
-            <li>✓ Charging port cleaning</li>
-            <li>✓ Speaker / mic repair</li>
-            <li>✓ Button replacement</li>
-            <li>✓ Free diagnostic</li>
-            <li>✓ 90-day warranty</li>
+            <li>✓ Čištění nabíjecího portu</li>
+            <li>✓ Oprava reproduktoru / mikrofonu</li>
+            <li>✓ Výměna tlačítek</li>
+            <li>✓ Diagnostika zdarma</li>
+            <li>✓ 90denní záruka</li>
           </ul>
-          <a href="#contact" class="btn btn--outline">Book Now</a>
+          <a href="#contact" class="btn btn--outline">Objednat</a>
         </div>
         <div class="pricing-card pricing-card--featured fade-in">
-          <div class="pricing-card__badge">Most Popular</div>
+          <div class="pricing-card__badge">Nejoblíbenější</div>
           <div class="pricing-card__header">
-            <h3>Screen & Battery</h3>
-            <p>Our most common repairs</p>
+            <h3>Displej a baterie</h3>
+            <p>Naše nejčastější opravy</p>
           </div>
-          <div class="pricing-card__price"><span>From</span>$49</div>
+          <div class="pricing-card__price"><span>Od</span>1 190 Kč</div>
           <ul class="pricing-card__features">
-            <li>✓ Screen replacement</li>
-            <li>✓ Battery replacement</li>
-            <li>✓ OEM-quality parts</li>
-            <li>✓ Same-day service</li>
-            <li>✓ 90-day warranty</li>
+            <li>✓ Výměna displeje</li>
+            <li>✓ Výměna baterie</li>
+            <li>✓ Díly v kvalitě OEM</li>
+            <li>✓ Servis v den příjmu</li>
+            <li>✓ 90denní záruka</li>
           </ul>
-          <a href="#contact" class="btn btn--primary">Book Now</a>
+          <a href="#contact" class="btn btn--primary">Objednat</a>
         </div>
         <div class="pricing-card fade-in">
           <div class="pricing-card__header">
-            <h3>Advanced Repair</h3>
-            <p>Complex damage & recovery</p>
+            <h3>Pokročilá oprava</h3>
+            <p>Komplexní poškození a záchrana</p>
           </div>
-          <div class="pricing-card__price"><span>From</span>$59</div>
+          <div class="pricing-card__price"><span>Od</span>1 390 Kč</div>
           <ul class="pricing-card__features">
-            <li>✓ Water damage recovery</li>
-            <li>✓ Camera replacement</li>
-            <li>✓ Motherboard repair</li>
-            <li>✓ Data recovery attempt</li>
-            <li>✓ 90-day warranty</li>
+            <li>✓ Záchrana poškození vodou</li>
+            <li>✓ Výměna fotoaparátu</li>
+            <li>✓ Oprava základní desky</li>
+            <li>✓ Pokus o záchranu dat</li>
+            <li>✓ 90denní záruka</li>
           </ul>
-          <a href="#contact" class="btn btn--outline">Book Now</a>
+          <a href="#contact" class="btn btn--outline">Objednat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ SUPPORT ═══════ -->
+  <section class="section support" id="support">
+    <div class="container support__inner">
+      <div class="support__image fade-in">
+        <div class="skeleton-image">
+          <span>Vizuál týmu</span>
+        </div>
+      </div>
+      <div class="support__content fade-in">
+        <span class="section-tag">Náš tým</span>
+        <h2>Poznejte svůj podpůrný tým</h2>
+        <p>Naši zkušení technici jsou zde, aby vám pomohli. Věříme v transparentní komunikaci a špičkový servis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ STATS ═════════ -->
+  <section class="section stats" id="stats">
+    <div class="container stats__inner">
+      <div class="stats__grid">
+        <div class="stat-item fade-in">
+          <span class="stat-number">2.4k+</span>
+          <span class="stat-label">Hotových oprav</span>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-number">4.9★</span>
+          <span class="stat-label">Hodnocení na Google</span>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-number">90</span>
+          <span class="stat-label">Dní záruka</span>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-number">60</span>
+          <span class="stat-label">Min. průměrná doba</span>
         </div>
       </div>
     </div>
@@ -220,35 +298,46 @@
   <section class="section testimonials" id="testimonials">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-tag">Customer Reviews</span>
-        <h2>What People Say</h2>
-        <p>Real customers, real repairs, real satisfaction.</p>
+        <span class="section-tag">Recenze zákazníků</span>
+        <h2>Co lidé říkají</h2>
+        <p>Skuteční zákazníci, skutečné opravy, skutečná spokojenost.</p>
       </div>
       <div class="testimonials__grid">
         <div class="testimonial-card fade-in">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p>"My iPhone screen was completely shattered. Brought it in at 10am and picked it up at 11. Looks brand new. Incredibly fast and professional!"</p>
+          <p>"Můj displej na iPhonu byl úplně rozbitý. Přinesl jsem ho v 10 dopoledne a vyzvedl v 11. Vypadá jako nový. Neuvěřitelně rychlé a profesionální!"</p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">SM</div>
-            <div><strong>Sarah M.</strong><span>iPhone 14 Pro — Screen Repair</span></div>
+            <div><strong>Sára M.</strong><span>iPhone 14 Pro — Oprava displeje</span></div>
           </div>
         </div>
         <div class="testimonial-card fade-in">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p>"Battery was dying by noon every day. They replaced it in 45 minutes for a great price. Phone lasts all day again. Highly recommend FixIt Pro!"</p>
+          <p>"Baterie mi umírala každý den v poledne. Vyměnili ji za 45 minut za skvělou cenu. Telefon zase vydrží celý den. FixIt Pro vřele doporučuji!"</p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">JK</div>
-            <div><strong>James K.</strong><span>Samsung S23 — Battery Replacement</span></div>
+            <div><strong>Jakub K.</strong><span>Samsung S23 — Výměna baterie</span></div>
           </div>
         </div>
         <div class="testimonial-card fade-in">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p>"Dropped my phone in the sink. These guys saved it! Got all my photos back too. I was sure it was gone forever. Amazing service, honest pricing."</p>
+          <p>"Spadl mi telefon do umyvadla. Tito kluci ho zachránili! Dostali zpět i všechny moje fotky. Byl jsem si jistý, že je navždy pryč. Úžasný servis, férové ceny."</p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">AP</div>
-            <div><strong>Anna P.</strong><span>Xiaomi 13 — Water Damage Recovery</span></div>
+            <div><strong>Anna P.</strong><span>Xiaomi 13 — Záchrana poškození vodou</span></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ FINAL CTA ══════ -->
+  <section class="section final-cta" id="final-cta">
+    <div class="container">
+      <div class="final-cta__box fade-in">
+        <h2>Jste připraveni opravit svůj telefon?</h2>
+        <p>Objednejte si svou 30minutovou diagnostickou konzultaci zcela zdarma!</p>
+        <a href="#contact" class="btn btn--primary btn--lg">Objednat opravu hned</a>
       </div>
     </div>
   </section>
@@ -257,54 +346,54 @@
   <section class="section faq" id="faq">
     <div class="container faq__inner">
       <div class="section-header fade-in">
-        <span class="section-tag">FAQ</span>
-        <h2>Common Questions</h2>
-        <p>Everything you need to know before bringing your phone in.</p>
+        <span class="section-tag">Často kladené dotazy</span>
+        <h2>Běžné otázky</h2>
+        <p>Vše, co potřebujete vědět, než k nám přinesete svůj telefon.</p>
       </div>
       <div class="faq__list fade-in">
         <div class="faq-item">
           <button class="faq-item__question" id="faq-question-duration" aria-expanded="false" aria-controls="faq-answer-duration">
-            How long does a typical repair take?
+            Jak dlouho trvá běžná oprava?
             <span class="faq-item__arrow">▼</span>
           </button>
           <div class="faq-item__answer" id="faq-answer-duration" role="region" aria-labelledby="faq-question-duration" aria-hidden="true">
-            <p>Most common repairs (screen, battery, charging port) take between 30–60 minutes. Complex repairs like water damage or motherboard work may take 1–2 days. We'll give you an accurate time estimate before starting.</p>
+            <p>Většina běžných oprav (displej, baterie, nabíjecí port) trvá 30–60 minut. Komplexní opravy jako poškození vodou nebo práce na základní desce mohou trvat 1–2 dny. Před zahájením vám poskytneme přesný odhad času.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-item__question" id="faq-question-appointment" aria-expanded="false" aria-controls="faq-answer-appointment">
-            Do I need to make an appointment?
+            Musím se objednat?
             <span class="faq-item__arrow">▼</span>
           </button>
           <div class="faq-item__answer" id="faq-answer-appointment" role="region" aria-labelledby="faq-question-appointment" aria-hidden="true">
-            <p>No appointment needed — walk-ins are always welcome! However, booking ahead via the contact form guarantees your spot and lets us prepare the right parts in advance.</p>
+            <p>Není potřeba se objednávat — zákazníci bez objednání jsou vždy vítáni! Rezervace předem přes kontaktní formulář vám však zaručí místo a umožní nám připravit si správné díly předem.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-item__question" id="faq-question-brands" aria-expanded="false" aria-controls="faq-answer-brands">
-            What brands do you repair?
+            Jaké značky opravujete?
             <span class="faq-item__arrow">▼</span>
           </button>
           <div class="faq-item__answer" id="faq-answer-brands" role="region" aria-labelledby="faq-question-brands" aria-hidden="true">
-            <p>We repair all major smartphone brands: Apple iPhone, Samsung Galaxy, Xiaomi, Huawei, OnePlus, Google Pixel, Motorola, and more. If it's a phone, we can almost certainly fix it.</p>
+            <p>Opravujeme všechny hlavní značky smartphonů: Apple iPhone, Samsung Galaxy, Xiaomi, Huawei, OnePlus, Google Pixel, Motorola a další. Pokud je to telefon, téměř jistě ho dokážeme opravit.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-item__question" id="faq-question-data" aria-expanded="false" aria-controls="faq-answer-data">
-            Is my data safe during the repair?
+            Jsou moje data během opravy v bezpečí?
             <span class="faq-item__arrow">▼</span>
           </button>
           <div class="faq-item__answer" id="faq-answer-data" role="region" aria-labelledby="faq-question-data" aria-hidden="true">
-            <p>Absolutely. We never access your personal data, photos, or accounts. For most repairs the phone stays locked the entire time. We recommend backing up your data before any repair as a general best practice.</p>
+            <p>Rozhodně. Nikdy nepřistupujeme k vašim osobním datům, fotkám nebo účtům. Při většině oprav zůstává telefon po celou dobu uzamčen. Jako obecný osvědčený postup doporučujeme před jakoukoli opravou data zálohovat.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-item__question" id="faq-question-warranty" aria-expanded="false" aria-controls="faq-answer-warranty">
-            What if the repair doesn't fix my phone?
+            Co když oprava můj telefon neopraví?
             <span class="faq-item__arrow">▼</span>
           </button>
           <div class="faq-item__answer" id="faq-answer-warranty" role="region" aria-labelledby="faq-question-warranty" aria-hidden="true">
-            <p>You pay nothing if we can't fix it. Our diagnostic is always free. If the repair doesn't solve the issue within our 90-day warranty window, we'll redo it or refund you — no hassle.</p>
+            <p>Pokud to nedokážeme opravit, nic neplatíte. Naše diagnostika je vždy zdarma. Pokud oprava nevyřeší problém v rámci naší 90denní záruční doby, uděláme ji znovu nebo vám vrátíme peníze — bez starostí.</p>
           </div>
         </div>
       </div>
@@ -315,25 +404,25 @@
   <section class="section contact" id="contact">
     <div class="container contact__inner">
       <div class="contact__info fade-in">
-        <span class="section-tag">Get In Touch</span>
-        <h2>Book Your Repair</h2>
-        <p>Tell us about your phone and issue. We'll confirm availability and give you an exact quote — usually within an hour.</p>
+        <span class="section-tag">Kontaktujte nás</span>
+        <h2>Objednejte si opravu</h2>
+        <p>Řekněte nám o svém telefonu a problému. Potvrdíme dostupnost a dáme vám přesnou nabídku — obvykle do hodiny.</p>
         <div class="contact__details">
           <div class="contact-detail">
             <span class="contact-detail__icon">📍</span>
-            <div><strong>Address</strong><span>Vinohradska 145, Praha 3</span></div>
+            <div><strong>Adresa</strong><span>Vinohradská 145, Praha 3</span></div>
           </div>
           <div class="contact-detail">
             <span class="contact-detail__icon">📞</span>
-            <div><strong>Phone</strong><span><a href="tel:+420777123456">+420 777 123 456</a></span></div>
+            <div><strong>Telefon</strong><span><a href="tel:+420777123456">+420 777 123 456</a></span></div>
           </div>
           <div class="contact-detail">
             <span class="contact-detail__icon">🕐</span>
-            <div><strong>Hours</strong><span>Po–So: 9:00–19:00</span></div>
+            <div><strong>Otevírací doba</strong><span>Po–So: 9:00–19:00</span></div>
           </div>
           <div class="contact-detail">
             <span class="contact-detail__icon">✉️</span>
-            <div><strong>Email</strong><span><a href="mailto:servis@fixitpro.cz">servis@fixitpro.cz</a></span></div>
+            <div><strong>E-mail</strong><span><a href="mailto:servis@fixitpro.cz">servis@fixitpro.cz</a></span></div>
           </div>
         </div>
       </div>
@@ -344,50 +433,50 @@
         </p>
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" name="name" autocomplete="name" placeholder="John Smith" required />
+            <label for="name">Vaše jméno *</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Jan Novák" required />
             <span class="form-error" id="nameError"></span>
           </div>
           <div class="form-group">
-            <label for="phone">Phone Number *</label>
+            <label for="phone">Telefonní číslo *</label>
             <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+420 777 123 456" required />
             <span class="form-error" id="phoneError"></span>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="device">Device Model *</label>
-            <input type="text" id="device" name="device" placeholder="e.g. iPhone 14, Samsung S23" required />
+            <label for="device">Model zařízení *</label>
+            <input type="text" id="device" name="device" placeholder="např. iPhone 14, Samsung S23" required />
             <span class="form-error" id="deviceError"></span>
           </div>
           <div class="form-group">
-            <label for="service">Service Needed *</label>
+            <label for="service">Požadovaná služba *</label>
             <select id="service" name="service" required>
-              <option value="">Select a service…</option>
-              <option value="screen">Screen Replacement</option>
-              <option value="battery">Battery Replacement</option>
-              <option value="water">Water Damage Recovery</option>
-              <option value="camera">Camera Repair</option>
-              <option value="charging">Charging Port Fix</option>
-              <option value="speaker">Speaker / Mic Repair</option>
-              <option value="other">Other / Not Sure</option>
+              <option value="">Vyberte službu…</option>
+              <option value="screen">Výměna displeje</option>
+              <option value="battery">Výměna baterie</option>
+              <option value="water">Záchrana poškození vodou</option>
+              <option value="camera">Oprava fotoaparátu</option>
+              <option value="charging">Oprava nabíjecího portu</option>
+              <option value="speaker">Oprava reproduktoru / mikrofonu</option>
+              <option value="other">Jiné / Nejsem si jistý</option>
             </select>
             <span class="form-error" id="serviceError"></span>
           </div>
         </div>
         <div class="form-group">
-          <label for="message">Describe the Issue</label>
-          <textarea id="message" name="message" placeholder="Tell us more about what's wrong…" rows="4"></textarea>
+          <label for="message">Popište problém</label>
+          <textarea id="message" name="message" placeholder="Řekněte nám více o tom, co je špatně…" rows="4"></textarea>
         </div>
         <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
-          <span class="btn-text">Send My Request</span>
-          <span class="btn-spinner" hidden>⏳ Sending…</span>
+          <span class="btn-text">Odeslat moji žádost</span>
+          <span class="btn-spinner" hidden>⏳ Odesílání…</span>
         </button>
         <div class="form-success" id="formSuccess" hidden>
-          ✅ Request received! We'll get back to you within 1 hour.
+          ✅ Žádost přijata! Ozveme se vám do 1 hodiny.
         </div>
         <div class="form-fail" id="formFail" hidden>
-          ❌ Something went wrong. Please call us directly.
+          ❌ Něco se pokazilo. Zavolejte nám prosím přímo.
         </div>
       </form>
     </div>
@@ -401,25 +490,25 @@
           <span class="logo-icon">🔧</span>
           <span>FixIt<strong>Pro</strong></span>
         </a>
-        <p>Fast, honest, reliable phone repair. Trusted by thousands of customers since 2018.</p>
+        <p>Rychlý, poctivý a spolehlivý servis telefonů. Důvěřují nám tisíce zákazníků od roku 2018.</p>
       </div>
       <div class="footer__links">
-        <h4>Services</h4>
-        <a href="#services">Screen Replacement</a>
-        <a href="#services">Battery Repair</a>
-        <a href="#services">Water Damage</a>
-        <a href="#services">Camera Repair</a>
+        <h4>Služby</h4>
+        <a href="#services">Výměna displeje</a>
+        <a href="#services">Oprava baterie</a>
+        <a href="#services">Poškození vodou</a>
+        <a href="#services">Oprava fotoaparátu</a>
       </div>
       <div class="footer__links">
-        <h4>Company</h4>
-        <a href="#why-us">About Us</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <h4>Společnost</h4>
+        <a href="#why-us">O nás</a>
+        <a href="#testimonials">Recenze</a>
+        <a href="#faq">Časté dotazy</a>
+        <a href="#contact">Kontakt</a>
       </div>
       <div class="footer__contact">
-        <h4>Find Us</h4>
-        <p>Vinohradska 145<br />Praha 3, 130 00</p>
+        <h4>Kde nás najdete</h4>
+        <p>Vinohradská 145<br />Praha 3, 130 00</p>
         <p><a href="tel:+420777123456">+420 777 123 456</a></p>
         <div class="footer__social">
           <a href="#" aria-label="Facebook">FB</a>
@@ -430,8 +519,8 @@
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <p>© <span id="currentYear"></span> FixIt Pro. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></p>
+        <p>© <span id="currentYear"></span> FixIt Pro. Všechna práva vyhrazena.</p>
+        <p><a href="#">Zásady ochrany osobních údajů</a> · <a href="#">Podmínky použití</a></p>
       </div>
     </div>
   </footer>

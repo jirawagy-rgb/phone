@@ -171,25 +171,25 @@ function createValidationRules() {
       el: document.getElementById("name"),
       err: document.getElementById("nameError"),
       test: (value) => value.trim().length >= 2,
-      msg: "Please enter your full name.",
+      msg: "Zadejte prosím své celé jméno.",
     },
     phone: {
       el: document.getElementById("phone"),
       err: document.getElementById("phoneError"),
       test: (value) => /^[\d\s+\-()]{7,}$/.test(value.trim()),
-      msg: "Enter a valid phone number.",
+      msg: "Zadejte platné telefonní číslo.",
     },
     device: {
       el: document.getElementById("device"),
       err: document.getElementById("deviceError"),
       test: (value) => value.trim().length >= 3,
-      msg: "Please enter your device model.",
+      msg: "Zadejte prosím model vašeho zařízení.",
     },
     service: {
       el: document.getElementById("service"),
       err: document.getElementById("serviceError"),
       test: (value) => value !== "",
-      msg: "Please select a service.",
+      msg: "Vyberte prosím službu.",
     },
   };
 }
