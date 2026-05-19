@@ -33,14 +33,25 @@ Workflow file: `.github/workflows/ci.yml`
 
 Execution path:
 
-1. Triggered on push, pull request, or manual dispatch
-2. Uses Node.js 20
-3. Runs `npm ci`
-4. Installs Playwright Chromium
-5. Runs `npm run check`
-6. Uploads Playwright artifacts on failure
+1. Triggered on every push, pull request, and manual dispatch
+2. Runs a `lint` job on Node.js 20
+3. Runs smoke tests in a matrix on Node.js 20 and 22 (`needs: lint`)
+4. Installs Playwright Chromium before smoke tests
+5. Uploads Playwright artifacts on failure (`test-results/`, `playwright-report/`)
 
-## 4) Form Submission Integration
+## 4) CD Workflow (GitHub Actions -> Netlify)
+
+Workflow file: `.github/workflows/cd.yml`
+
+Execution path:
+
+1. Triggered by successful completion of `CI` workflow (`workflow_run`) or manual dispatch
+2. Automatic deployment is gated to successful CI runs from `push` events on `main`
+3. Checkout uses the exact tested commit SHA from CI (`workflow_run.head_sha`)
+4. Validates required secrets (`NETLIFY_AUTH_TOKEN`, `NETLIFY_SITE_ID`)
+5. Deploys static assets from `src/` with `netlify-cli deploy --prod`
+
+## 5) Form Submission Integration
 
 Primary path:
 
@@ -56,17 +67,20 @@ Provider assumptions:
 - In production, hosting provider must accept form POSTs for lead capture
 - In local/test runs, `tests/static-server.cjs` handles POST with a mock success response
 
-## 5) Deployment Workflow
+## 6) Local SEO Integration Workflow
 
-Current documented target: Netlify (from `README.md`)
+Source of truth: `src/index.html`
 
-1. Push to connected branch
-2. Netlify builds/deploys static site
-3. Form submissions are collected in provider dashboard
+1. Update metadata block (`title`, `meta description`, OpenGraph tags)
+2. Keep JSON-LD (`MobilePhoneRepairShop`) data aligned with visible business details
+3. Keep service-area text aligned across hero, support, contact, and footer
+4. Keep address links valid for Google Maps deep link navigation
+5. Validate with `npm run lint` and optional external rich-result validation
 
-If changing host:
+## 7) External Service Inventory
 
-- Keep static asset serving behavior
-- Replace form endpoint/integration if native form capture is unavailable
-- Re-run smoke tests after migration
-
+- Netlify: static hosting + form ingestion (production)
+- GitHub Actions: CI/CD orchestration
+- Google Fonts: remote font delivery (`fonts.googleapis.com`, `fonts.gstatic.com`)
+- Google Maps: address deep links from contact and footer
+- Facebook URL in structured data (`sameAs`) for business identity linkage

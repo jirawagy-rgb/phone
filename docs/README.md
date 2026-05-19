@@ -2,6 +2,8 @@
 
 This folder contains structured engineering documentation for the SNAP landing page.
 
+Last reviewed: 2026-05-19
+
 ## Structure
 
 - `adr/` - Architecture Decision Records (ADRs)
@@ -15,6 +17,8 @@ This folder contains structured engineering documentation for the SNAP landing p
 - [0002 - Form Submission Strategy](./adr/0002-form-submission-strategy.md)
 - [0003 - Modular CSS Layering](./adr/0003-modular-css-layering.md)
 - [0004 - Quality Gates and CI](./adr/0004-quality-gates-and-ci.md)
+- [0005 - CI-Gated Continuous Deployment](./adr/0005-ci-gated-continuous-deployment.md)
+- [0006 - Local SEO Metadata and Structured Data](./adr/0006-local-seo-metadata-and-structured-data.md)
 
 ## Component Docs
 

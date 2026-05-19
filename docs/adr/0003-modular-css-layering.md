@@ -15,7 +15,8 @@ Keep CSS split into layers and import in a stable order via `src/styles/styles.c
 2. `src/styles/layout.css` (global layout structures)
 3. `src/styles/sections.css` (section-level wrappers)
 4. `src/styles/components.css` (reusable UI blocks)
-5. `src/styles/responsive.css` (breakpoint overrides)
+5. `src/styles/skeleton.css` (skeleton visual placeholders for image blocks)
+6. `src/styles/responsive.css` (breakpoint overrides)
 
 ## Consequences
 

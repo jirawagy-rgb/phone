@@ -6,7 +6,7 @@ This document maps key components to their structure, behavior, and integration 
 
 - Markup shell: `src/index.html`
 - Behavior layer: `src/js/main.js`
-- Styling layers: `src/styles/base.css`, `src/styles/layout.css`, `src/styles/sections.css`, `src/styles/components.css`, `src/styles/responsive.css`
+- Styling layers: `src/styles/base.css`, `src/styles/layout.css`, `src/styles/sections.css`, `src/styles/components.css`, `src/styles/skeleton.css`, `src/styles/responsive.css`
 
 ## Components
 
@@ -26,10 +26,28 @@ This document maps key components to their structure, behavior, and integration 
 - Behavior: smooth-scroll CTA interaction
 - Style owners: `src/styles/layout.css`, `src/styles/base.css`
 - Responsibilities:
-  - Primary value proposition and trust signals
+  - Primary value proposition and local SEO headline context
   - Main conversion CTAs to services/contact
 
-### 3) Services Grid
+### 3) Problem Section
+
+- Markup anchor: `#problem`
+- Behavior: reveal animation via `.fade-in`
+- Style owners: `src/styles/sections.css`, `src/styles/skeleton.css`
+- Responsibilities:
+  - Problem framing before service presentation
+  - Visual placeholder support via skeleton image block
+
+### 4) Solution Section
+
+- Markup anchor: `#solution`
+- Behavior: reveal animation via `.fade-in`
+- Style owners: `src/styles/sections.css`, `src/styles/skeleton.css`
+- Responsibilities:
+  - Position service promise and CTA transition into conversion flow
+  - Visual placeholder support via skeleton image block
+
+### 5) Services Grid
 
 - Markup anchor: `#services`
 - Behavior: reveal animation via `.fade-in`
@@ -37,7 +55,7 @@ This document maps key components to their structure, behavior, and integration 
 - Responsibilities:
   - Present service scope and pricing entry points
 
-### 4) Why Us Grid
+### 6) Why Us Grid
 
 - Markup anchor: `#why-us`
 - Behavior: reveal animation via `.fade-in`
@@ -45,7 +63,7 @@ This document maps key components to their structure, behavior, and integration 
 - Responsibilities:
   - Communicate differentiators (speed, warranty, trust)
 
-### 5) Pricing Cards
+### 7) Pricing Cards
 
 - Markup anchor: `#pricing`
 - Behavior: reveal animation via `.fade-in`
@@ -53,7 +71,24 @@ This document maps key components to their structure, behavior, and integration 
 - Responsibilities:
   - Package service types into decision-ready pricing tiers
 
-### 6) Testimonials
+### 8) Support Section
+
+- Markup anchor: `#support`
+- Behavior: reveal animation via `.fade-in`
+- Style owners: `src/styles/sections.css`, `src/styles/skeleton.css`
+- Responsibilities:
+  - Team credibility and local service-area narrative
+  - Bridge between pricing and social proof content
+
+### 9) Stats Section
+
+- Markup anchor: `#stats`
+- Behavior: reveal animation via `.fade-in`
+- Style owners: `src/styles/sections.css`, `src/styles/components.css`
+- Responsibilities:
+  - Compact trust metrics and business proof points
+
+### 10) Testimonials
 
 - Markup anchor: `#testimonials`
 - Behavior: reveal animation via `.fade-in`
@@ -61,7 +96,15 @@ This document maps key components to their structure, behavior, and integration 
 - Responsibilities:
   - Social proof and conversion confidence
 
-### 7) FAQ Accordion
+### 11) Final CTA
+
+- Markup anchor: `#final-cta`
+- Behavior: reveal animation via `.fade-in`
+- Style owners: `src/styles/sections.css`, `src/styles/components.css`
+- Responsibilities:
+  - Last conversion prompt before FAQ/contact detail review
+
+### 12) FAQ Accordion
 
 - Markup anchor: `#faq`
 - Behavior: `initFaqAccordion`, `setFaqItemOpen`
@@ -70,7 +113,7 @@ This document maps key components to their structure, behavior, and integration 
   - Single-open accordion interaction
   - ARIA state syncing (`aria-expanded`, `aria-hidden`)
 
-### 8) Contact Form
+### 13) Contact Form
 
 - Markup anchors: `#contact`, `#contactForm`, `#submitBtn`, `#formSuccess`, `#formFail`
 - Behavior: `initContactForm`, `createValidationRules`, `validateField`, `setSubmitLoadingState`
@@ -80,7 +123,7 @@ This document maps key components to their structure, behavior, and integration 
   - Async form submission and loading state
   - Success/failure feedback rendering
 
-### 9) Footer + Dynamic Year
+### 14) Footer + Dynamic Year
 
 - Markup anchor: `#currentYear`
 - Behavior: `setCurrentYear`
@@ -88,7 +131,7 @@ This document maps key components to their structure, behavior, and integration 
 - Responsibilities:
   - Brand/support links and legal footer metadata
 
-### 10) Back-to-Top Control
+### 15) Back-to-Top Control
 
 - Markup anchor: `#backToTop`
 - Behavior: `initBackToTop`, `initNavbarScroll`
@@ -96,6 +139,16 @@ This document maps key components to their structure, behavior, and integration 
 - Responsibilities:
   - Contextual visibility after scroll threshold
   - Smooth scroll back to page start
+
+### 16) SEO Metadata and Structured Data
+
+- Markup anchors: `<head>`, JSON-LD script (`type="application/ld+json"`)
+- Behavior: static data consumed by crawlers (no runtime JS dependency)
+- Owners: `src/index.html` head metadata block
+- Responsibilities:
+  - Local SEO targeting through localized title/description/OpenGraph values
+  - Structured business identity via `MobilePhoneRepairShop` schema
+  - Service-area and business contact coherence with visible content
 
 ## Quality Coverage Mapping
 
@@ -109,4 +162,3 @@ This document maps key components to their structure, behavior, and integration 
 - Coverage gap examples:
   - FAQ interaction behavior not currently asserted
   - Back-to-top button visibility/behavior not currently asserted
-

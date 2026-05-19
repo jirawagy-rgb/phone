@@ -14,6 +14,8 @@ Use a combined quality gate pipeline:
 - Linting: ESLint (`src/js/main.js`), Stylelint (`src/styles/*.css`), HTMLHint (`src/index.html`)
 - Browser smoke coverage: Playwright tests (`tests/e2e/smoke.spec.js`)
 - CI orchestration: GitHub Actions workflow at `.github/workflows/ci.yml`
+- CI job split: dedicated `lint` job + `test` job requiring lint success
+- Runtime compatibility matrix: smoke tests on Node.js 20 and 22
 - Single developer command: `npm run check`
 
 ## Consequences

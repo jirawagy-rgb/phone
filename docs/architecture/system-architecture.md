@@ -12,6 +12,7 @@ flowchart TD
     C --> L[src/styles/layout.css]
     C --> S[src/styles/sections.css]
     C --> P[src/styles/components.css]
+    C --> K[src/styles/skeleton.css]
     C --> R[src/styles/responsive.css]
     H --> J[src/js/main.js]
 
@@ -56,6 +57,9 @@ flowchart LR
     SMOKE --> A3[Form validation and success path]
 
     CI -->|on failure| AR[Upload test artifacts]
+    CI -->|success on main push| CD[GitHub Actions CD]
+    CD --> NS[Validate Netlify secrets]
+    NS --> ND[netlify-cli deploy --prod --dir=src]
 ```
 
 ## Notes
