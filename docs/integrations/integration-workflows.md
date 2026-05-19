@@ -2,6 +2,8 @@
 
 This document describes how external systems and internal automation connect to the project.
 
+Last reviewed: 2026-05-19
+
 ## 1) Local Development Workflow
 
 1. Install dependencies: `npm ci`
@@ -84,3 +86,25 @@ Source of truth: `src/index.html`
 - Google Fonts: remote font delivery (`fonts.googleapis.com`, `fonts.gstatic.com`)
 - Google Maps: address deep links from contact and footer
 - Facebook URL in structured data (`sameAs`) for business identity linkage
+
+## 8) Documentation Synchronization Workflow
+
+When a change affects runtime behavior, architecture, or delivery automation:
+
+1. Update relevant implementation files in `src/`, `tests/`, or `.github/workflows/`.
+2. Update component references in `docs/components/component-catalog.md`.
+3. Update or add ADRs in `docs/adr/` for decisions and tradeoffs.
+4. Update this file when integration boundaries, third-party dependencies, or CI/CD execution paths change.
+5. Run `npm run check` before merge to validate code-level quality gates.
+
+## 9) Multi-Chat Continuity Workflow
+
+At the end of each major session:
+
+1. Update `context-engineering-progress.md`:
+   - Current architecture and integration state
+   - Decisions made this session
+   - Tests run and results
+   - Next concrete step
+2. Add a date-stamped change log entry with doc files touched.
+3. Keep "next actions" short and execution-ready for the next chat.

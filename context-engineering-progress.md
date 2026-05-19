@@ -25,6 +25,7 @@ This file is a continuity anchor across multiple chats. Update it at the end of 
 - `docs/adr/0004-quality-gates-and-ci.md`
 - `docs/adr/0005-ci-gated-continuous-deployment.md`
 - `docs/adr/0006-local-seo-metadata-and-structured-data.md`
+- `docs/adr/0007-documentation-governance-and-session-continuity.md`
 - `docs/components/component-catalog.md`
 - `docs/integrations/integration-workflows.md`
 
@@ -36,6 +37,8 @@ This file is a continuity anchor across multiple chats. Update it at the end of 
 - Keep lint + smoke tests as minimum quality gate
 - Gate production deployment on successful CI for `main` pushes
 - Maintain local SEO metadata and JSON-LD directly in `src/index.html`
+- Keep structured documentation synchronized via ADR/component/integration update workflow
+- Keep `context-engineering-progress.md` updated as a multi-chat handoff anchor
 
 ## Known Gaps / Risks
 
@@ -43,13 +46,14 @@ This file is a continuity anchor across multiple chats. Update it at the end of 
 - Smoke test coverage does not yet include back-to-top behavior
 - Form integration remains coupled to provider conventions
 - Business metadata appears in multiple places (visible copy + JSON-LD) and can drift
+- Footer social links are placeholders (`#`) and not aligned with structured-data social profile
 
 ## Next Recommended Actions
 
 1. Add smoke tests for FAQ and back-to-top behaviors.
-2. Add an ADR template file for future decision consistency.
-3. Add a lightweight doc check in CI to detect stale references after architecture/content changes.
-4. Add an SEO consistency checklist (metadata, JSON-LD, contact details, service area) to PR review.
+2. Add a lightweight doc check in CI to detect stale references after architecture/content changes.
+3. Add an SEO consistency checklist (metadata, JSON-LD, contact details, service area) to PR review.
+4. Replace footer social placeholders with real profile URLs or remove the UI block.
 
 ## Session Handoff Template
 
@@ -67,3 +71,4 @@ When continuing in a new chat, copy and refresh this block:
 
 - 2026-05-17: Initial structured documentation set added (ADRs, components, integration workflows) and continuity file created.
 - 2026-05-19: Added ADR 0006 for local SEO strategy and aligned component/integration docs with current runtime and CI/CD behavior.
+- 2026-05-19: Added ADR 0007 for documentation governance and expanded component/integration docs with explicit synchronization and multi-chat continuity workflows.

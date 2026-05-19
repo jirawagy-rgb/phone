@@ -2,6 +2,8 @@
 
 This document maps key components to their structure, behavior, and integration points.
 
+Last reviewed: 2026-05-19
+
 ## Runtime Composition
 
 - Markup shell: `src/index.html`
@@ -162,3 +164,12 @@ This document maps key components to their structure, behavior, and integration 
 - Coverage gap examples:
   - FAQ interaction behavior not currently asserted
   - Back-to-top button visibility/behavior not currently asserted
+
+## Component Documentation Workflow
+
+Use this checklist whenever component behavior or markup changes:
+
+1. Update anchors/selectors and owning JS/CSS locations in this catalog.
+2. Confirm affected integration paths in `docs/integrations/integration-workflows.md` (for example form, CI, deploy, or external links).
+3. If the change alters architectural constraints or introduces new tradeoffs, add a new ADR in `docs/adr/`.
+4. Update `context-engineering-progress.md` with changed files, decisions, and next follow-up actions.
