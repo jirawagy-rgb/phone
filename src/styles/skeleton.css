@@ -143,7 +143,7 @@
   margin-right: auto;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .problem__inner,
   .support__inner {
     grid-template-columns: 1fr;

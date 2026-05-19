@@ -1,6 +1,6 @@
 # Project Documentation
 
-This folder contains structured engineering documentation for the FixIt Pro landing page.
+This folder contains structured engineering documentation for the SNAP landing page.
 
 ## Structure
 

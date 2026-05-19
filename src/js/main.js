@@ -1,5 +1,5 @@
 /*
-  FixIt Pro — script.js
+  SNAP — script.js
   P1 refactor: split behavior into focused init functions.
 */
 

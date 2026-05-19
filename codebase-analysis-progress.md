@@ -11,7 +11,7 @@ Last updated: 2026-05-16 12:59
 
 ## Project Summary
 
-This repository is a static landing page for a phone repair business called FixIt Pro. It uses plain HTML, CSS, and browser JavaScript, with npm-based linting and Playwright smoke tests.
+This repository is a static landing page for a phone repair business called SNAP. It uses plain HTML, CSS, and browser JavaScript, with npm-based linting and Playwright smoke tests.
 
 ## Important Files Reviewed
 

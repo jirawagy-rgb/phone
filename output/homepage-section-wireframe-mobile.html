@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage Wireframe - Mobile</title>
+  <style>
+    :root {
+      --bg: #e9e9eb;
+      --surface: #f7f7f8;
+      --card: #ffffff;
+      --ink: #202020;
+      --muted: #6b6b6b;
+      --line: #d6d6d9;
+      --accent: #3550f2;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+      padding: 16px;
+    }
+
+    .phone {
+      max-width: 430px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid #cfcfd2;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .section {
+      padding: 20px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 8px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      border: 1px dashed var(--accent);
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 30px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 20px; }
+
+    p {
+      margin: 0;
+      color: #4e4e4e;
+      font-size: 15px;
+    }
+
+    .bar {
+      height: 28px;
+      border-radius: 8px;
+      background: #ededf0;
+      border: 1px solid var(--line);
+    }
+
+    .header-main {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .logo {
+      width: 110px;
+      height: 20px;
+      background: #dfe5ff;
+      border-radius: 6px;
+    }
+
+    .menu {
+      width: 42px;
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      color: #676767;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .hero {
+      text-align: left;
+      background: var(--card);
+    }
+
+    .hero h2 {
+      color: var(--accent);
+      font-size: 34px;
+      line-height: 1.06;
+    }
+
+    .cta {
+      margin-top: 14px;
+      width: 100%;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--accent);
+    }
+
+    .benefits {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .benefit {
+      min-height: 44px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-weight: 600;
+      color: #5a5a5a;
+    }
+
+    .img {
+      min-height: 180px;
+      border: 2px dashed #c9c9cc;
+      border-radius: 12px;
+      background: #ececef;
+      display: grid;
+      place-items: center;
+      color: #9b9ba0;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .checks {
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .service-card,
+    .quote,
+    .stat {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .service-card + .service-card,
+    .quote + .quote,
+    .stat + .stat {
+      margin-top: 10px;
+    }
+
+    .service-image {
+      height: 110px;
+      border-radius: 10px;
+      background: #efeff2;
+      border: 1px solid var(--line);
+      margin-bottom: 10px;
+    }
+
+    .team {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 10px;
+    }
+
+    .team p { color: rgba(255,255,255,0.92); }
+
+    .cta-final {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 28px 16px;
+    }
+
+    .cta-final p { color: rgba(255, 255, 255, 0.93); }
+
+    .cta-final .cta {
+      margin-top: 16px;
+      background: #fff;
+    }
+
+    .footer {
+      background: #fff;
+      padding: 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .foot-line {
+      height: 14px;
+      border-radius: 6px;
+      background: #efeff2;
+      border: 1px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+  <main class="phone">
+    <section class="section">
+      <span class="label">Úvod</span>
+      <h1>Homepage</h1>
+      <p>Mobilní varianta sekčního wireframu podle dodaného layoutu.</p>
+    </section>
+
+    <section class="section">
+      <span class="label">Hlavička</span>
+      <div class="bar"></div>
+      <div class="header-main">
+        <div class="logo"></div>
+        <div class="menu">≡</div>
+      </div>
+    </section>
+
+    <section class="section hero">
+      <span class="label">Hero + CTA</span>
+      <h2>Pomůžeme vám dosáhnout cíle</h2>
+      <p>Silný nadpis, krátký podnadpis a jedno hlavní tlačítko přes celou šířku.</p>
+      <div class="cta"></div>
+      <div class="benefits">
+        <div class="benefit">Benefit 1</div>
+        <div class="benefit">Benefit 2</div>
+        <div class="benefit">Benefit 3</div>
+        <div class="benefit">Benefit 4</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="label">Popište problém</span>
+      <div class="img">Obrázek problému</div>
+      <h3>Je tohle váš problém?</h3>
+      <p>Pojmenujte bolest klienta a ukažte, že jí rozumíte.</p>
+      <ul class="checks">
+        <li>✓ Problém č. 1</li>
+        <li>✓ Problém č. 2</li>
+        <li>✓ Problém č. 3</li>
+        <li>✓ Problém č. 4</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <span class="label">Nabídněte řešení</span>
+      <h3>[Moje služba] vám pomůže</h3>
+      <p>Jak přesně vaše služba pomáhá a proč je vhodná právě pro tento problém.</p>
+      <div class="img" style="margin-top:12px;">Vizuál řešení</div>
+    </section>
+
+    <section class="section">
+      <span class="label">Ukažte nabídku</span>
+      <h3>Zde je řešení</h3>
+      <p>Na mobilu jako vertikální stack karet.</p>
+      <article class="service-card">
+        <div class="service-image"></div>
+        <strong>Levná služba</strong>
+      </article>
+      <article class="service-card">
+        <div class="service-image"></div>
+        <strong>Oblíbená služba</strong>
+      </article>
+      <article class="service-card">
+        <div class="service-image"></div>
+        <strong>Drahá služba</strong>
+      </article>
+    </section>
+
+    <section class="section">
+      <span class="label">Představte se</span>
+      <div class="img">Foto týmu</div>
+      <div class="team">
+        <h3>A kdo vám bude oporou?</h3>
+        <p>Krátký příběh, zkušenosti a důvěryhodnost.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="label">Pochlubte se</span>
+      <h3>Mluví za nás výsledky</h3>
+      <article class="stat"><strong>1+</strong> Roky praxe</article>
+      <article class="stat"><strong>10+</strong> Projektů</article>
+      <article class="stat"><strong>100+</strong> Spokojených klientů</article>
+      <article class="stat"><strong>1000+</strong> Ušetřených hodin</article>
+    </section>
+
+    <section class="section">
+      <span class="label">Recenze</span>
+      <h3>Co říkají klienti?</h3>
+      <article class="quote">Reference 1</article>
+      <article class="quote">Reference 2</article>
+      <article class="quote">Reference 3</article>
+      <article class="quote">Reference 4</article>
+    </section>
+
+    <section class="cta-final">
+      <span class="label" style="border-color:#fff;color:#fff;">Výzva k akci</span>
+      <h3>Zarezervujte si konzultaci zdarma</h3>
+      <p>Kontrastní závěrečný blok s jedinou akcí.</p>
+      <div class="cta"></div>
+    </section>
+
+    <footer class="footer">
+      <span class="label" style="margin:0">Patička</span>
+      <div class="foot-line"></div>
+      <div class="foot-line"></div>
+      <div class="foot-line"></div>
+    </footer>
+  </main>
+</body>
+</html>

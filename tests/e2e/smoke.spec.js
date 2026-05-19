@@ -38,10 +38,10 @@ test.describe('Landing Page Smoke Tests', () => {
 
     await page.locator('#submitBtn').click();
 
-    await expect(page.locator('#nameError')).toContainText('Please enter your full name.');
-    await expect(page.locator('#phoneError')).toContainText('Enter a valid phone number.');
-    await expect(page.locator('#deviceError')).toContainText('Please enter your device model.');
-    await expect(page.locator('#serviceError')).toContainText('Please select a service.');
+    await expect(page.locator('#nameError')).toContainText('Zadejte prosím své celé jméno.');
+    await expect(page.locator('#phoneError')).toContainText('Zadejte platné telefonní číslo.');
+    await expect(page.locator('#deviceError')).toContainText('Zadejte prosím model vašeho zařízení.');
+    await expect(page.locator('#serviceError')).toContainText('Vyberte prosím službu.');
   });
 
   test('submits form successfully with valid input', async ({ page }) => {

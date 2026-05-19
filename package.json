@@ -2,7 +2,7 @@
   "name": "phone-repair-landing",
   "version": "1.0.0",
   "private": true,
-  "description": "Static landing page for FixIt Pro phone repair business",
+  "description": "Static landing page for SNAP phone repair business",
   "scripts": {
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
     "lint:js": "eslint src/js/main.js",

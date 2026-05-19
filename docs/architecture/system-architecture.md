@@ -1,6 +1,6 @@
 # System Architecture
 
-This document visualizes the FixIt Pro landing page architecture and the delivery pipeline.
+This document visualizes the SNAP landing page architecture and the delivery pipeline.
 
 ## Runtime Architecture
 

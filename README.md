@@ -1,8 +1,8 @@
-# FixIt Pro — Phone Repair Landing Page
+# SNAP — Phone Repair Landing Page
 
 [![CI](https://github.com/jirawagy-rgb/phone/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jirawagy-rgb/phone/actions/workflows/ci.yml)
 
-A static marketing and lead-generation landing page for **FixIt Pro**, a phone repair business based in Praha 3.
+A static marketing and lead-generation landing page for **SNAP**, a phone repair business based in Nový Bor.
 
 ## What's on the page
 
